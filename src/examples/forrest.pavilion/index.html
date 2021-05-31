@@ -422,18 +422,12 @@ function download () {
     link.download = filename
     link.click()
 }
-<div id='map' style='width: 400px; height: 300px;'></div>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiYmFzZWxnaGF6YWx5IiwiYSI6ImNrcDF1dHYzNDExc2kyb256dmhtNnJxOXYifQ.gTF-aqQ8ZAPg8aLNDDe1DQ';
-var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11'
-});
-</script>
 
 /**
  * Shows or hides the loading spinner
  */
+
+
 function showSpinner(enable) {
   if (enable)
     document.getElementById('loader').style.display = 'block'
