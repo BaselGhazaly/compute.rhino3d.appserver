@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,6 +37,8 @@
                 100% { transform: rotate(360deg); }
             }
         </style>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
     </head>
     <body>
         <div id="loader"></div> 
@@ -418,6 +422,14 @@ function download () {
     link.download = filename
     link.click()
 }
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmFzZWxnaGF6YWx5IiwiYSI6ImNrcDF1dHYzNDExc2kyb256dmhtNnJxOXYifQ.gTF-aqQ8ZAPg8aLNDDe1DQ';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11'
+});
+</script>
 
 /**
  * Shows or hides the loading spinner
