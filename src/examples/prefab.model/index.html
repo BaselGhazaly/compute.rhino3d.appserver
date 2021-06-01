@@ -72,7 +72,7 @@ loader.setLibraryPath( 'https://cdn.jsdelivr.net/npm/rhino3dm@0.15.0-beta/' )
 
 // initialise 'data' object that will be used by compute()
 const data = {
-  definition: 'Appserver1.gh',
+  definition: 'Appserver2.gh',
   inputs: getInputs()
 }
 
@@ -260,7 +260,7 @@ function collectResults(responseJson) {
 /**
  * Attempt to decode data tree item to rhino geometry
  */
-/**function decodeItem(item) {
+function decodeItem(item) {
   const data = JSON.parse(item.data)
   if (item.type === 'System.String') {
     // hack for draco meshes
@@ -272,7 +272,7 @@ function collectResults(responseJson) {
   }
   return null
 }
-/
+
 /**
  * Called when a slider value changes in the UI. Collect all of the
  * slider values and call compute to solve for a new scene
